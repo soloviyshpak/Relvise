@@ -1,0 +1,49 @@
+body, html {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $text-color;
+}
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1082px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.main__consulting {
+    
+}
+.main__experience {
+    margin-top: -130px;
+    padding-top: 210px;
+    padding-bottom: 102px;
+    background: $page-bg-color;
+}
+.main__advice {
+    padding-top: 102px;
+    padding-bottom: 130px;
+}
+.main__trust {
+    padding-top: 50px;
+    padding-bottom: 136px;
+}
+.main__partners {
+    padding-top: 70px;
+    padding-bottom: 157px;
+}
+.main__subscribe {
+}
+.main__touch {
+    padding-top: 80px;
+    padding-bottom: 148px;
+}
+.main__agency {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

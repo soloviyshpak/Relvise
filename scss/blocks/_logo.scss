@@ -1,0 +1,13 @@
+.logo {
+    display: block;
+    color: $title-color;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

@@ -1,0 +1,173 @@
+.header {
+    background: url('../img/hero-bcg.jpg') 100% no-repeat;
+    background-size: cover;
+    padding-bottom: 191px;
+    
+    .helper {
+        visibility: hidden;
+    }
+
+    .header__toprow {
+        display: flex;
+        align-items: center;
+        padding: 23px 0;
+        
+        .logo {
+            @include mediaTablet {
+                margin-bottom: 100px;
+                transform: scale(1.5);
+            }
+        }
+        
+        .nav {
+            margin-left: 132px;
+            
+            .nav__list {
+                display: flex;
+
+                @include mediaTablet {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            .nav__item {
+                margin-right: 21px;
+                
+                &:last-child {
+                    margin: 0;
+                }
+                
+                @include mediaTablet {
+                    margin: 0;
+                }
+                @include mediaTablet {
+                    margin-bottom: 45px;
+                    font-size: 20px;
+                }
+            }
+            
+            .nav__link {
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                transition: all .3s;
+
+                &:hover {
+                    color: $btn-color;
+                }
+            }
+            
+            @include mediaTablet {
+                margin: 0;
+            }
+        }
+        
+        @include mediaTablet {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            background: $page-bg-color-2;
+            top: 0;
+            left: 50%;
+            right: 0;
+            bottom: 0;
+            transform: translateX(100%);
+            padding: 20% 0;
+            border-radius: 10px;
+            z-index: 100;
+            transition: all .3s;
+        }
+        
+        @include mediaPhone {
+            left: 0;
+        }
+    }
+    
+    .header__toprow--open {
+        transform: translateX(0);
+    }
+    
+    .header__content {
+        max-width: 509px;
+        margin-top: 116px;
+
+        @include mediaTablet {
+            background: rgba(255, 255, 255, 0.808);
+            padding: 30px;
+            margin: 65px auto 0 auto;
+            border-radius: 4px;
+        }
+
+        @include mediaPhone {
+            background: rgba(255, 255, 255, 0.808);
+            padding: 30px;
+            margin-top: 65px;
+            border-radius: 4px;
+        }
+    }
+    
+    .header__title {
+        color: $title-color;
+        font-size: 58px;
+        font-weight: 800;
+        line-height: 80px;
+        letter-spacing: 0.2px;
+
+        @include mediaPhone {
+            text-align: center;
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+    }
+    
+    .header__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        margin: 35px 0;
+    }
+    
+    .header__btn-box {
+        display: flex;
+
+        @include mediaPhone {
+            flex-direction: column;
+        }
+    }
+    
+    .header__btn {
+        @include button ($btn-text-color, $btn-color, 37px, 9px 35px);
+        margin-right: 10px;
+        border: 1px solid $btn-color;
+        transition: all .3s;
+
+        &:hover {
+            background: transparent;
+            color: $btn-color;
+            
+        }
+        
+        @include mediaPhone {
+            margin: 0 0 10px 0;
+            text-align: center;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    
+    .header__btn--empty {
+        @include button ($accent-color, transparent, 37px, 9px 35px);
+        border: 1px solid $accent-color;
+
+        &:hover {
+            background: $accent-color;
+            color: $btn-text-color;
+        }
+    }
+
+}
+

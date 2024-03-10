@@ -1,0 +1,186 @@
+.footer {
+    .footer__top {
+        background: $accent-color-2;
+        padding: 50px 0;
+    }
+    .footer__top-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 55px 30px;
+        @include media878 {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .footer__top-block {
+        // margin-left: 30px;
+        white-space: nowrap;
+    }
+    .footer__top-block_title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        margin-bottom: 20px;       
+    }
+    .footer__top-block_title--slide {
+        pointer-events: none;
+        @include media878 {
+            pointer-events: auto;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                border: 9px solid transparent; 
+                border-right: 14px solid #fff;
+                transition: all .3s;
+            }
+        }
+    }
+    .footer__top-block_title--slide_open {
+       
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            border: 9px solid transparent; 
+            border-top: 14px solid #fff;
+            margin: 5px 0 0 4px;
+        }
+        
+    }
+    .footer__top-list {
+        display: flex;
+        flex-direction: column;
+        
+        @include media878 {
+            display: none;
+            align-items: center;
+        }
+    }
+    .footer__top-item {
+        margin-bottom: 10px;
+    
+        address {
+            font-style: normal;
+        }
+        &:last-child {
+            margin: 0;
+        }
+        
+    }
+    .footer__top-link {
+        color: #fff;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        transition: all .3s;
+
+        &:hover {
+            color: $btn-color;
+        }
+    }
+    .footer__top-link--phone {
+        padding-left: 34px;
+        position: relative;
+    
+        &::before {
+            content: "";
+            width: 23px;
+            height: 24px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: url('../img/icons/phone-min-icon.svg');
+        }
+    }
+    .footer__top-link--address {
+        padding-left: 34px;
+        position: relative;
+    
+        &::before {
+            content: "";
+            width: 24px;
+            height: 31px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: url('../img/icons/waypoint-min-icon.svg');
+        }
+    }
+    .footer__top-link--email {
+        padding-left: 34px;
+        position: relative;
+    
+        &::before {
+            content: "";
+            width: 24px;
+            height: 26px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: url('../img/icons/message-min-icon.svg');
+        }
+    }
+    
+    .footer__bottom {
+        background: $page-bg-color;
+        padding: 25px 0;
+    
+        .footer__bottom-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include mediaPhone {
+                flex-direction: column;
+            }
+        }
+        .footer__copy {
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+
+            @include mediaPhone {
+                margin-bottom: 15px;
+                text-align: center;
+            }
+        }
+        .footer__socials {
+            display: flex;
+            align-items: center;
+        
+        }
+        .footer__socials-item {
+            margin-right: 20px;
+        
+            &:last-child {
+                margin: 0;
+            }
+        }
+        .footer__socials-link {
+            img {
+                border-radius: 4px;
+                transition: all .3s;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.3);
+                }
+            }
+            
+            
+        }
+    }
+}
+
+
+

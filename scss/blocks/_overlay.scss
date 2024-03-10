@@ -1,0 +1,20 @@
+.overlay {
+    display: none;
+
+    @include mediaTablet {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #000000a4;
+        z-index: 100;
+    }
+}
+
+.overlay--show {
+    @include mediaTablet {
+        display: block;
+    }
+    
+}

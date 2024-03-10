@@ -1,0 +1,141 @@
+.trust {
+}
+.trust__heading {
+    margin-bottom: 100px;
+}
+.trust__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include mediaTablet {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.trust__video {
+    
+}
+.trust__imgbox {
+    position: relative; 
+    svg {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+
+        @include mediaPhone {
+            width: 20%;
+        }
+        
+    }
+    svg rect {
+        transition: all .3s;
+    }
+    .trust__img-wrapper {
+        @include mediaTablet {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.trust__video-link:hover {
+    svg rect {
+        fill: $btn-color; 
+    }
+}
+.trust__desc {
+    margin-left: 102px;
+
+    @include mediaTablet {
+        margin: 0;
+    }
+}
+.trust__desc-heading {
+
+    h3 {
+        color: $title-color;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 57px;
+        letter-spacing: 0.2px;
+        margin-bottom: 10px;
+
+        @include mediaTablet {
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+    p {
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        margin-bottom: 50px;
+
+        @include mediaTablet {
+            text-align: center;
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+    @include mediaTablet {
+        max-width: 510px;
+    }
+}
+.trust__desc-list {
+    @include mediaTablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.trust__desc-item {
+    margin-top: 30px;
+    padding-left: 43px;
+
+    h4 {
+        color: $title-color;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        position: relative;
+
+        @include mediaTablet {
+            font-size: 14px;
+        }
+        
+    }
+    p {
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+
+        @include mediaTablet {
+            font-size: 12px;
+        }
+    }
+    .trust__member-icon::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        left: -45px;
+        background: url('../img/icons/members-2-icon.svg');
+    }
+    .trust__speedometr-icon::before {
+        content: "";
+        width: 32px;
+        height: 26px;
+        position: absolute;
+        top: 0;
+        left: -45px;
+        background: url('../img/icons/speedometr-icon.svg');
+    }
+
+    
+}

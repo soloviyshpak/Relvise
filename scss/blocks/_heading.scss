@@ -1,0 +1,26 @@
+.heading {
+    text-align: center;
+    h2 {
+        color: $title-color;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 57px;
+        letter-spacing: 0.2px;
+        margin: 0 auto;
+        
+        @include mediaTablet {
+            font-size: 30px;
+        }
+    }
+    p {
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        max-width: 511px;
+        margin: 0 auto;
+        margin-top: 10px;
+
+        @include mediaTablet {
+            font-size: 12px;
+        }
+    }
+}

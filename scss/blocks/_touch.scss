@@ -1,0 +1,81 @@
+.touch {
+    background: $page-bg-color-2;
+}
+.touch__heading {
+    margin-bottom: 80px;
+}
+.touch__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mediaTablet {
+        flex-direction: column;
+    }
+}
+.touch__card {
+    padding: 50px 40px;
+    text-align: center;
+    background: #fff;
+    
+    .touch__emails {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: $title-color;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+    }
+    h4 {
+        margin-bottom: 15px;
+        color: $title-color;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+    }
+    a {
+        display: block;
+    }
+    .touch__btn {
+        @include button ($btn-color, transparent, 5px, 10px 20px);
+        border: 1px solid $btn-color;
+        max-width: 160px;
+        margin: 0 auto;
+        transition: all .3s;
+
+        &:hover {
+            background: $btn-color;
+            color: #fff;
+        }
+    }
+
+    @include mediaTablet {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+.touch__card--black {
+    padding: 80px 40px;
+    background: $title-color;
+
+    a {
+        color: #fff;
+    }
+    h4 {
+        color: #fff;
+    }
+    svg path {
+        fill: #fff;
+    }
+    .touch__btn {
+        border-color: #fff;
+        color: #fff;
+
+        &:hover {
+            background: #fff;
+            color: $title-color;
+        }
+    }
+}
+
